@@ -717,7 +717,7 @@ header ul {
     display: flex;
     flex-direction: column;
     padding: 3rem;
-    width: 35%;
+    width: 65%;
     border-right: 1px solid var(--stroke);
     gap: 3rem;
 }
@@ -757,12 +757,11 @@ header ul {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    width: 65%;
+    width: 35%;
 }
 
 .qr__codes {
     display: flex;
-    flex-wrap: wrap;
 }
 
 .qr__codes span {
@@ -770,7 +769,7 @@ header ul {
 }
 
 .qr__codes > div {
-    width: 50%;
+    width: 100%;
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -782,10 +781,6 @@ header ul {
 .qr__codes > div picture {
     padding: 1.5rem;
     background-color: #fff;
-}
-
-.qr__codes > div:first-child {
-    border-right: 0;
 }
 
 .qr__codes > div a {
@@ -912,6 +907,19 @@ footer > div > div > div > div {
     background-color: var(--header);
 }
 
+.content__block h2 {
+    font-size: 1.5rem !important;
+    margin: 2rem 0 1rem 0;
+}
+
+.content__block a {
+    color: var(--header) !important;
+    text-decoration: underline !important;
+}
+
+.content__block a:hover {
+    color: var(--accent) !important;
+}
 
 @media (min-width: 1440px) {
 
@@ -1011,24 +1019,16 @@ footer > div > div > div > div {
     .promo__block h2 {
         font-size: 14vh;
     }
-
-    .contacts__block {
-        flex-direction: column;
-    }
-
-    .contacts__block > div {
-        width: 100% !important;
-        gap: 0;
-    }
-
-    .contacts__block > div:first-child {
-        padding-bottom: 0;
-    }
 }
 
 @media (max-width: 992px) {
     .promo__block h2 {
         font-size: 13vh;
+    }
+
+    .contacts__block > div {
+        width: 50% !important;
+        gap: 0;
     }
 }
 
@@ -1049,17 +1049,17 @@ footer > div > div > div > div {
         border-top: 1px solid var(--stroke) !important;
     }
 
-    .qr__codes {
+    .contacts__block {
         flex-direction: column;
     }
 
-    .qr__codes > div {
-        width: 100%;
+    .contacts__block > div {
+        width: 100% !important;
+        gap: 0;
     }
 
-    .qr__codes > div:first-child {
-        border-bottom: 0;
-        border-right: 1px solid var(--stroke);
+    .contacts__block > div:first-child {
+        padding-bottom: 0;
     }
 }
 
