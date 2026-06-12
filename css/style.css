@@ -872,6 +872,47 @@ footer > div > div > div > div {
     color: var(--header) !important;
 }
 
+#policyAlert {
+    position: fixed;
+    z-index: 99;
+    bottom: 1rem;
+    background-color: var(--header__bg);
+    backdrop-filter: blur(3rem);
+    -webkit-backdrop-filter: blur(3rem);
+    left: auto;
+    right: 1rem;
+    margin: 0 auto;
+    max-width: 650px;
+    width: calc(100% - 2rem);
+    padding: 1rem;
+    color: var(--text);
+    font-size: .75rem;
+    border: 1px solid var(--stroke);
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+#policyAlert a {
+    font-weight: 700;
+    color: var(--header);
+    text-decoration: underline !important;
+}
+
+#policyAlert button {
+    font-size: .75rem;
+    padding: .5rem 1rem;
+    border: 0;
+    color: var(--bg__1);
+    background-color: var(--accent);
+}
+
+#policyAlert button:hover {
+    background-color: var(--header);
+}
+
+
 @media (min-width: 1440px) {
 
     .container,
@@ -1174,5 +1215,16 @@ footer > div > div > div > div {
         flex-direction: column;
         gap: 1.5rem !important;
         align-items: center;
+    }
+
+    #policyAlert {
+        flex-direction: column;
+        gap: .5rem;
+        width: calc(100% - 1.5rem);
+        right: .75rem;
+    }
+
+    #policyAlert button {
+        width: 100%;
     }
 }

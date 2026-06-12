@@ -55,3 +55,17 @@ document.documentElement.dataset.theme = savedTheme;
         toggle.dataset.theme = next;
         localStorage.setItem("theme", next);
 });
+
+
+const cookieAlert = document.getElementById("policyAlert");
+const cookieAcceptBtn = document.getElementById("cookieAccept");
+const cookieConsent = localStorage.getItem("cookieConsent");
+
+if (cookieConsent === "accepted") {
+    cookieAlert.style.display = "none";
+}
+
+cookieAcceptBtn.addEventListener("click", () => {
+    localStorage.setItem("cookieConsent", "accepted");
+    cookieAlert.style.display = "none";
+});
